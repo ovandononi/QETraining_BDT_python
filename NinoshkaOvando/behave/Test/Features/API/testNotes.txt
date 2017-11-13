@@ -1,0 +1,43 @@
+1. Matching a step with a regular expression
+#
+2. reutilizar codigo
+// Implement more test cases where the steps is similar and variable
+Scenario: This is the first scenario
+Given I have $100 in my account
+AND I have $200 in my account
+---
+@given(u'I have $100 in my account')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given I have $100 in my account')
+
+@given(u'I have $200 in my account')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given I have $200 in my account')
+---
+2. answer
+Definir as parametro ${amount}
+@given(u'I have ${amount} in my account')
+def step_impl(context, amount):
+    raise NotImplementedError(u'STEP: Given I have ${amount} in my account')
+
+3. cuando tengo que crear otro step, cuando el comportamiento es diferent
+Ejemplo: guardar y extraer en un step pero con + o -
+si el - esta fallando, el gurdar no falla, crear en dos steps
+4. predefinir el tipo de dato de las variables
+w letras an underscore  --> output String
+s whitespace
+S non - Whitespace
+d digit
+
+4. Practice
+Scenario: Validate zipcode a(numbers) , county(letter or undercore) and nro habitants(number with thousend)
+Given I have the following input data: 456852 zipcode, new_zeland county, 100.000.152 nro habitants
+When days process is calculated
+Then the correct successfully message include days and data entered
+-----
+@given(u'I have the following input data: {x:d} zipcode, {y:w} county, {z:n} nro habitants')
+def step_impl(context, x, y, z):
+    a =x
+
+
+
