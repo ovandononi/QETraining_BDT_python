@@ -27,3 +27,9 @@ Scenario: Validate zipcode a(numbers) , county(letter or undercore) and nro habi
 Given I have the following input data: 456852 zipcode, new_zeland county, 100.000.152 nro habitants
 When days process is calculated
 Then the correct successfully message include days and data entered
+
+
+Scenario: test
+Give I have "2" and "2"
+When I select "sum"
+Then my result should be "4"

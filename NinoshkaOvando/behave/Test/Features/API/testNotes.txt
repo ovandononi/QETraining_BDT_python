@@ -39,5 +39,54 @@ Then the correct successfully message include days and data entered
 def step_impl(context, x, y, z):
     a =x
 
+-------=======================================================
+==============================================================
+1. Regular expression to verify a email
+2. Install as type of machers or assertions
+pip install compare
+python -m pip install compare
+--- brinda una libreria que da mas detalle de lo esperado o comparado
+--- feature files are staticos and it need to compare with something dinamic
+--- expect(amount).to_equal('100')
+-- amount is dinamic
+--- For example
+--- valores staticos
+Give I have "2" and "2"
+When I select "sum"
+Then my result should be "4"
+--- valores dinamicos
+def sum(a,b)
+return a+b
+--- expect(value).to_equal(expected_value)
+--- expect(value)== expected_value
+both are the same
+
+---- expect(value).to_be_greater_than_or_equal_to(expected_value)
+expect(value)>= expected_value
+---- to_be_less_than_or_equal_to
+---- to_be_less_than
+
+--- expect(a1).to_be(a2) (validation for identity)
+cuan sierto o falso es una expresion todo lo qe es 0 es false or todo lo que es difrente de 0 es true
+---- expect(value).to_be_truthy()
+---- expect(value).to_be_falsy()
+====================================================
+scenario outline
+----------------
+patrones de pasos con diferentes datos,
+carga una lista de datos
+
+Ejemplo:
+Given I login as "Ana"
+And the pass is "123"
+when I click on login button
+then I message "Welcome Ana"
+
+data input:
+user    Pass
+a1      pass1
+a2      pass1
+a3      pass1
+
 
 
