@@ -1,6 +1,8 @@
+@CRUD
 Feature: Withdraw fixed amount
 the "Withdraw cash" menu contains several fixed amounts to speed up transactions for users.
 
+@scenario_send
 Scenario Outline: withdraw fixed amount
     Given I have <Balance> in my account
     When I choose to Withdraw the fixed amount of <Withdraw>

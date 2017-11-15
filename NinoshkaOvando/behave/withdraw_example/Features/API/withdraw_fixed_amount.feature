@@ -1,3 +1,5 @@
+before_feature
+@CRUD
 Feature: Withdraw fixed amount
 the "Withdraw cash" menu contains several fixed amounts to speed up transactions for users.
 
